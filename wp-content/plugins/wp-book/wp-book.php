@@ -111,3 +111,19 @@ new Wp_Book_Settings();
 
 require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-info-shortcode.php';
 new WPBook_Shortcode();
+
+require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-block.php';
+new Wp_Book_Block();
+
+add_action('enqueue_block_editor_assets', function () {
+    wp_enqueue_script(
+        'wp-book-block',
+        plugins_url('block/index.js', __FILE__),
+        ['wp-blocks', 'wp-element', 'wp-components', 'wp-editor'],
+        filemtime(plugin_dir_path(__FILE__) . 'block/index.js'),
+        true
+    );
+});
+
+require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-dashboard-widget.php';
+new Wp_Book_Dashboard_Widget();

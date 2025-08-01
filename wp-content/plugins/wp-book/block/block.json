@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "wp-book/book-block",
+  "title": "Book Block",
+  "category": "widgets",
+  "icon": "book",
+  "description": "A dynamic block that shows book details.",
+  "editorScript": "file:./index.js",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "bookId": {
+      "type": "number"
+    }
+  }
+}
