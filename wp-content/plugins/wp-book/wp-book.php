@@ -92,3 +92,16 @@ new Wp_Book_Category_Taxonomy_Hierarchal();
 // Book metabox
 require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-metabox.php';
 new Wp_Book_Custom_Metabox();
+
+//Book meta table
+require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-meta-table.php';
+$book_meta = new Wp_book_Meta_Table();
+
+register_activation_hook(__FILE__, [$book_meta, 'create_table']);
+register_deactivation_hook(__FILE__, 'wp_book_delete_table');
+
+function wp_book_delete_table() {
+    global $wpdb;
+    $table = $wpdb->prefix . 'book_meta';
+    $wpdb->query("DROP TABLE IF EXISTS $table");
+}

@@ -17,7 +17,7 @@ class Wp_Book_Custom_Metabox{
             ?>
              <p>
                 <label for="wp_book_<?php echo $field; ?>"><strong><?php echo ucfirst(str_replace('_', ' ', $field)); ?></strong></label><br/>
-                <input type="text" id="wpbook_<?php echo $field; ?>" name="wpbook_<?php echo $field; ?>" value="<?php echo esc_attr($value); ?>" class="widefat" />
+                <input type="text" id="wp_book_<?php echo $field; ?>" name="wp_book_<?php echo $field; ?>" value="<?php echo esc_attr($value); ?>" class="widefat" />
             </p>
             <?php
         }
