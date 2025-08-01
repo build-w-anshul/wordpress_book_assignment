@@ -80,3 +80,7 @@ function run_wp_book() {
 
 }
 run_wp_book();
+
+//custom post type activation in menu 
+require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-cpt.php';
+new Wp_custom_post_type();
