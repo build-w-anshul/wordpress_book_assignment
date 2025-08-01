@@ -9,6 +9,11 @@ class Wp_Book_Category_Taxonomy_Hierarchal{
             'hierarchal' =>true,
             'show_in_rest' => true
         ]);
+        register_taxonomy('book_tag', 'book', [
+            'label' => __('Book Tag', 'wp-book'),
+            'hierarchical' => false,
+            'show_in_rest' => true
+        ]);
     }
 }
 ?>
