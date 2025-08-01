@@ -88,3 +88,7 @@ new Wp_custom_post_type();
 //cutom taxonomy - hierarchal
 require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-taxonomies.php';
 new Wp_Book_Category_Taxonomy_Hierarchal();
+
+// Book metabox
+require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-metabox.php';
+new Wp_Book_Custom_Metabox();
