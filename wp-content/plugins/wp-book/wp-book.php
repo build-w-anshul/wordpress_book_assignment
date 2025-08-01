@@ -105,3 +105,8 @@ function wp_book_delete_table() {
     $table = $wpdb->prefix . 'book_meta';
     $wpdb->query("DROP TABLE IF EXISTS $table");
 }
+
+require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-settings.php';
+
+// Initialize the settings class
+new Wp_Book_Settings();
