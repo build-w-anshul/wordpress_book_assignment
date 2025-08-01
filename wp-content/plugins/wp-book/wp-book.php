@@ -84,3 +84,7 @@ run_wp_book();
 //custom post type activation in menu 
 require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-cpt.php';
 new Wp_custom_post_type();
+
+//cutom taxonomy - hierarchal
+require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-taxonomies.php';
+new Wp_Book_Category_Taxonomy_Hierarchal();
