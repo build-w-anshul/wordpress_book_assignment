@@ -107,6 +107,7 @@ function wp_book_delete_table() {
 }
 
 require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-settings.php';
-
-// Initialize the settings class
 new Wp_Book_Settings();
+
+require_once plugin_dir_path(__FILE__) . 'includes/class-wp-book-info-shortcode.php';
+new WPBook_Shortcode();

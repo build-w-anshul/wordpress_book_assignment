@@ -29,7 +29,7 @@ class Wp_book_Meta_Table {
         $data = [
             'book_id' => $post_id,
             'author' => sanitize_text_field($_POST['wp_book_author'] ?? ''),
-            'name' => sanitize_text_field($_POST['wp_book_aname'] ?? ''),
+            'name' => sanitize_text_field($_POST['wp_book_name'] ?? ''),
             'price' => sanitize_text_field($_POST['wp_book_price'] ?? ''),
             'publisher' => sanitize_text_field($_POST['wp_book_publisher'] ?? ''),
             'year' => sanitize_text_field($_POST['wp_book_year'] ?? ''),
